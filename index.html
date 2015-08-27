@@ -25,11 +25,11 @@
           function createSquare(){
             var none = Snap('#snippet-1 svg');
 
-            // DRAW RECTANGLE
-            var rect1 = none.rect(3, 3, 200, 200); // origin X, origin Y, width, height
-            rect1.attr({
-              fill: '#00a99d'
-            });
+            // // DRAW RECTANGLE
+            // var rect1 = none.rect(3, 3, 200, 200); // origin X, origin Y, width, height
+            // rect1.attr({
+            //   fill: '#00a99d'
+            // });
 
             // // ATTACH CLICK EVENT
             // rect1.click(function(){
@@ -85,47 +85,47 @@
         var twitterSVG = Snap('#snippet-2 svg');
         var twitter = twitterSVG.select('path');
         
-        // MAKE IT BIGGER
-        twitterSVG.attr({
-          width: 300,
-          height: 300,
-          cx: 75,
-          cy: 75
-        });
+        // // MAKE IT BIGGER
+        // twitterSVG.attr({
+        //   width: 300,
+        //   height: 300,
+        //   cx: 75,
+        //   cy: 75
+        // });
 
-        // CREATE A GRADIENT
-        var gradient = twitterSVG.gradient("l(0, 0, 1, 1)#ccaddb-#00a99d-#addbc1");
-        var circ = twitter.getBBox().width;
-        var radius = circ/2;
-        var center = radius;
+        // // CREATE A GRADIENT
+        // var gradient = twitterSVG.gradient("l(0, 0, 1, 1)#ccaddb-#00a99d-#addbc1");
+        // var circ = twitter.getBBox().width;
+        // var radius = circ/2;
+        // var center = radius;
 
-        // FILL THE TWITTER PATH WITH THE GRADIENT
-        twitter.attr({
-          fill: gradient
-        });
+        // // FILL THE TWITTER PATH WITH THE GRADIENT
+        // twitter.attr({
+        //   fill: gradient
+        // });
 
-        // ATTACH A HOVER EVENT TO THE SVG ELEMENT (NOT THE PATH)
-        twitterSVG.hover(function(){
-          animIn();
-        }, function(){
-          animOut();
-        })
+        // // ATTACH A HOVER EVENT TO THE SVG ELEMENT (NOT THE PATH)
+        // twitterSVG.hover(function(){
+        //   animIn();
+        // }, function(){
+        //   animOut();
+        // })
 
-        function animIn() {
-          twitter.animate({
-            transform: 'rotate(360, 24.6127, 24.6127)' 
-            //transform: 'translate(24.6127, 24.6127)'
-            //transform: 'scale(2, 2, 24.6127, 24.6127)'
-            //transform: 'skewX(20)'
-            //transform: 'skewY(20)'
-          },750, mina.easeInOut)
-        };
+        // function animIn() {
+        //   twitter.animate({
+        //     transform: 'rotate(360, 24.6127, 24.6127)' 
+        //     //transform: 'translate(24.6127, 24.6127)'
+        //     //transform: 'scale(2, 2, 24.6127, 24.6127)'
+        //     //transform: 'skewX(20)'
+        //     //transform: 'skewY(20)'
+        //   },750, mina.easeInOut)
+        // };
 
-        function animOut() {
-          twitter.animate({
-            transform: 'rotate(0, 24.6127, 24.6127)'
-          },750, mina.easeInOut)
-        };
+        // function animOut() {
+        //   twitter.animate({
+        //     transform: 'rotate(0, 24.6127, 24.6127)'
+        //   },750, mina.easeInOut)
+        // };
 
       });
     </script>
